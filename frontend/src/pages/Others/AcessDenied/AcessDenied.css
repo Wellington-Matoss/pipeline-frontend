@@ -1,0 +1,89 @@
+.container-denied {
+  padding: 30px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+.container-denied .main-denied {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.container-denied .main-denied .img-key {
+  margin-bottom: 0px;
+}
+.container-denied .main-denied .title-denied {
+  color: #000;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 160px;
+  font-weight: 800;
+  letter-spacing: -28px;
+  text-shadow: -6px 4px 0px #fff;
+  margin-left: -20px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.container-denied .main-denied .title-denied span {
+  margin-right: 30px;
+  transition: all 1s ease;
+  display: inline-block;
+  animation: pulse 5s infinite;
+}
+.container-denied .main-denied .text-denied {
+  letter-spacing: 0.38px;
+  font-weight: 500px;
+  line-height: 20px;
+  font-size: 16px;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.container-denied .main-denied .text-denied a {
+  color: #1177bd;
+  text-decoration: none;
+  font-weight: 700;
+}
+.container-denied .main-denied .text-denied a:hover, .container-denied .main-denied .text-denied a:focus {
+  text-decoration: underline;
+}
+.container-denied .main-denied .text-denied {
+  font-size: 50px;
+  font-weight: 700;
+  color: #1177bd;
+  text-transform: none;
+}
+.container-denied .main-denied .text-denied-small {
+  font-size: 20px;
+  top: auto;
+  bottom: 40px;
+}
+
+@keyframes pulse {
+  from {
+    color: #000;
+  }
+  to {
+    color: rgb(112, 186, 141);
+  }
+}
+@media (max-width: 768px) {
+  .container-denied .main-denied .title-denied {
+    font-size: 120px;
+    letter-spacing: -20px;
+    margin-bottom: 30px;
+  }
+  .container-denied .main-denied .text-denied {
+    top: 10px;
+  }
+  .container-denied .main-denied .text-denied-small {
+    bottom: -60px;
+  }
+  .container-denied .main-denied .text-denied {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=AcessDenied.css.map */
