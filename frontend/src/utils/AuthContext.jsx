@@ -1,4 +1,5 @@
 // Importações
+import axios from 'axios';
 import Loader from '@pages/Others/Loader/Loader';
 import { createContext, useState, useEffect, useContext } from "react";
 
@@ -10,7 +11,24 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(true)
 
 
-    useEffect(() => { }, [])
+    const baseURL = import.meta.env.VITE_API
+    const [testeAPI, setTesteAPI] = useState('')
+
+
+    useEffect(() => {
+        checkApiConnection()
+    }, [])
+
+
+    const checkApiConnection = async () => {
+        try {
+            const response = await axios.get(`${baseURL}/kyoya/teste/api`)
+            setTesteAPI(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
 
     const loginUser = async (userInfo) => { }
@@ -27,6 +45,7 @@ export const AuthProvider = ({ children }) => {
 
     const contextData = {
         user,
+        testeAPI,
         loginUser,
         logoutUser,
         registerUser
