@@ -1,0 +1,153 @@
+@import './../../../Global.scss';
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+
+// @import "~@flaticon/flaticon-uicons/css/all/all";
+
+// @import "~@flaticon/flaticon-uicons/css/{FONTWEIGHT}/{STYLENAME}";
+// @import "~@flaticon/flaticon-uicons/css/700/regular";
+// @import "~@flaticon/flaticon-uicons/css/brands/all";
+
+// // MOBILE FIRST
+
+header {
+    padding-inline: 30px;
+    background-color: var(--white-color);
+    display: flex;
+    padding-block: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        gap: 48px;
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+    }
+
+}
+
+main {
+    padding-inline: 30px;
+    padding-block: 32px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p{
+        margin: 0;
+    }
+
+}
+
+.photo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid var(--gray-border);
+
+}
+
+.usuarios-cluster {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+
+    .usuarios-item {
+        width: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 60%;
+        background-position: center;
+        height: 30px;
+    }
+
+    .user-1{
+        background-image: url('https://media.istockphoto.com/id/1262964459/photo/nothing-is-a-magnet-for-success-like-self-confidence.webp?b=1&s=170667a&w=0&k=20&c=MGoEpHkz63VRhAPZ44dFAuAmRC0QAseAc6srOQKHDbw=');
+    }
+    .user-2{
+        background-image: url('https://plus.unsplash.com/premium_photo-1682144187125-b55e638cf286?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D');
+    }
+    .user-3{
+        background-image: url('https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D');
+    }
+    .user-4{
+        background-image: url('https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D');
+    }
+
+    .adm{
+        border: 2.83333px solid #677EE9;
+        filter: drop-shadow(0px 0px 14.1667px rgba(103, 126, 233, 0.7));
+    }
+
+}
+
+.btn-border{
+    background-color: white;
+    color: var(--color-text-medium);
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-column-gap: 16px;
+    grid-row-gap: 32px;
+    margin-top: 16px;
+}
+
+.card-item {
+    text-align: center;
+    background-color: var(--white-color);
+    border-radius: 6px;
+    position: relative;
+    padding: 60px 16px 24px;
+    border: 1px solid var(--gray-border);
+
+    .icon-card {
+        // background-image: url(https://cdn-icons-png.flaticon.com/512/0/191.png);
+        font-size: 40px;
+        background-size: cover;
+        background-color: var(--white-color);
+        border: 1px solid var(--gray-border);
+        border-radius: 60%;
+        padding: 16px;
+        position: absolute;
+        top: 4%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+// Desktop
+@media (min-width: 768px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 210px);
+        grid-column-gap: 16px;
+        grid-row-gap: 0;
+        margin-top: 16px;
+    }
+}

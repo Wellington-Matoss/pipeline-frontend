@@ -1,0 +1,138 @@
+@import './../../Global.scss';
+
+.section-form {
+    /* height: 100vh; */
+    padding-block: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid var(--gray-border);
+    width: 480px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 32px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.label-card {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+
+    input {
+        padding: 8px 16px;
+        border-radius: 6px;
+        height: 40px;
+        border: 1px solid var(--gray-border);
+    }
+}
+
+.label-card-check {
+    input {
+        border: 1px solid var(--gray-border);
+        border-radius: 4px;
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+    }
+}
+
+input::placeholder {
+    color: var(--color-text-light);
+    font-size: var(--font-size-base);
+}
+
+.register-logos {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Media Query para dispositivos desktop */
+@media (min-width: 1024px) {}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+    .section-form {
+        height: 100vh;
+        display: flex;
+        padding: 30px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        border: 1px solid var(--gray-border);
+        width: 480px;
+        border-radius: 8px;
+        background-color: white;
+        padding: 24px;
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .label-card {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+
+        input {
+            padding: 8px 8px;
+            color: gray;
+            font-size: 16px;
+            border-radius: 6px;
+            height: 40px;
+            border: 1px solid var(--gray-border);
+        }
+    }
+
+    .label-card-check {
+        input {
+            border: 1px solid var(--gray-border);
+            border-radius: 4px;
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    .register-logos {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    input::placeholder {
+        color: var(--color-text);
+    }
+}

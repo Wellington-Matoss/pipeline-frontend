@@ -1,13 +1,13 @@
 services:
   frontend:
-    container_name: spa-frontend
+    container_name: frontend
     build: ./frontend
     ports:
       - "3001:3001"
     env_file:
       - ./frontend/.env
     volumes:
-      - spa-volume:/var/www/html
+      - frontend-volume:/var/www/html
 
   cc-nginx:
     container_name: nginx-server
@@ -15,9 +15,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - spa-volume:/var/www/html
+      - frontend-volume:/var/www/html
     depends_on:
       - frontend
 
 volumes:
-  spa-volume:
+  frontend-volume:
