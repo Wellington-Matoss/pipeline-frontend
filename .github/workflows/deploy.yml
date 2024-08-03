@@ -7,6 +7,7 @@ jobs:
   deploy:
     name: Deploy to EC2
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout the files
         uses: actions/checkout@v4
@@ -14,8 +15,8 @@ jobs:
       - name: Copy files with SSH
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-          SOURCE: "./"
-          REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-          REMOTE_USER: ${{secrets.REMOTE_USER}}
-          TARGET: "/home/ubuntu/"
+        SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
+        SOURCE: "./"
+        REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+        REMOTE_USER: ${{secrets.REMOTE_USER}}
+        TARGET: "/home/ubuntu/"
