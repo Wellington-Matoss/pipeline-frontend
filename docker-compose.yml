@@ -1,4 +1,14 @@
 services:
+  testamdo:
+    container_name: testamdo
+    build: ./testamdo
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./testamdo/.env
+    volumes:
+      - testamdo-volume:/var/www/html
+
   frontend:
     container_name: frontend
     build: ./frontend
