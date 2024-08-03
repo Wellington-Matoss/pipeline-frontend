@@ -9,7 +9,7 @@ services:
     volumes:
       - frontend-volume:/var/www/html
 
-  cc-nginx:
+  nginx:
     container_name: nginx-server
     build: ./nginx
     ports:
